@@ -13,11 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                   <div class="card-body">
+                   <div class="card-body row">
                         @foreach($images as $image)
                             <div class="col-4">
-                                <span>{{$image->name}}</span><br/>
-                                <img src="{{$image->image}}" width="300px" height="300px"/>
+                            <h3><span class="badge badge-pill badge-info">{{$image->name}}</span></h3>
+                                <img src="{{$image->image}}" width="300px" height="300px"  class="rounded" alt="{{$image->name}}"/>
                             </div>    
                         @endforeach
                    </div>
