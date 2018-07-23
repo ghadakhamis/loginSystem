@@ -16,10 +16,10 @@ class ImagesController extends Controller
         $image=$request->file('image');
         $path=$image->store('public/images');
         $splitPath=explode('/', $path, 3);
-        $request['image']="storage/".$splitPath[1]."/".$splitPath[2];
+        $image="storage/".$splitPath[1]."/".$splitPath[2];
         Image::create([
             'name' => $request['name'],
-            'image' => $request['image']
+            'image' => $image
         ]);
         return redirect('/home'); 
     }

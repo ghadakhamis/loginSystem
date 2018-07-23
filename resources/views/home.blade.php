@@ -16,7 +16,8 @@
                    <div class="card-body">
                         @foreach($images as $image)
                             <div class="col-4">
-                                {{$image->name}}
+                                <span>{{$image->name}}</span><br/>
+                                <img src="{{$image->image}}" width="300px" height="300px"/>
                             </div>    
                         @endforeach
                    </div>
